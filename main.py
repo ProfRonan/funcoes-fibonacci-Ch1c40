@@ -1,11 +1,8 @@
-n = int(input("> "))
-t1 = 0
-t2 = 1
-cont = 3
-print ("{}, {},".format(t1, t2))
-while cont <= n:
-    t3 = t1 + t2
-    t1 = t2
-    t2 = t3
-    cont += 1
-    print("{},".format(t3), end="")
+def fibonacci(n):
+    if n < 0:
+        raise ValueError("n tem que ser maior do que zero")
+    if n == 0:
+        return 1
+    if n == 1:
+        return 2
+    return fibonnaci(n-1) + (n-2)
