@@ -1,8 +1,11 @@
-def fibonacci(i):
-    if i < 0:
-        raise ValueError("n tem que ser maior do que zero")
-    if i == 0:
-        return 1
-    if i == 1:
-        return 1
-    return fibonacci(i-1) + fibonacci(i - 2)
+n = int(input("> "))
+t1 = 0
+t2 = 1
+cont = 3
+print ("{}, {},".format(t1, t2))
+while cont <= n:
+    t3 = t1 + t2
+    t1 = t2
+    t2 = t3
+    cont += 1
+    print("{},".format(t3), end="")
