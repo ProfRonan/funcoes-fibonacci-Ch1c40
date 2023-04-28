@@ -1,8 +1,12 @@
 def fibonacci(n):
-    if n < 0:
-        raise ValueError("n tem que ser maior do que zero")
-    if n == 0:
-        return 1
-    if n == 1:
-        return 2
-    return fibonnaci(n-1) + (n-2)
+	if n <0:
+		raise ValueError("Não existe fibonacci com n negativo!")
+	if type(n) != int:
+		raise ValueError("Só serve com numeros inteiro")
+	
+	fib = [0, 1]
+	if n == 0:
+		return fib[0]
+	for i in range(2, n + 1):
+		fib.append(fib[-1] + fib[-2])
+	return fib.pop()
